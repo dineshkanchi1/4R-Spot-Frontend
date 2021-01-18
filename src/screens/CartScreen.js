@@ -74,7 +74,7 @@ const CartScreen = (props) => {
                 <div className="card card-body">
                     <ul>
                         <li>
-                            <h2>Subtotal({cartItems.reduce((a,c)=> a+c.qty,0)} items) : ${cartItems.reduce((a,c)=>a+c.price*c.qty,0)}</h2>
+                            <h2>Subtotal({cartItems.reduce((a,c)=> a+c.qty,0)} items) : Rs.{cartItems.reduce((a,c)=>a+c.price*c.qty,0)}</h2>
                         </li>
                         <li>
                             <button type="button" onClick={checkOutHandler} className="primary block" disabled={cartItems.length===0}>
