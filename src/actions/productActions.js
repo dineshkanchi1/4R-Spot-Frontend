@@ -14,7 +14,7 @@ export const listProducts = () => async (dispatch) => {
         type: PRODUCT_LIST_REQUEST
     });
     try{
-        const {data} = await Axios.get('/api/products');
+        const {data} = await Axios.get('https://dinesh-4r-spot.herokuapp.com/api/products');
         dispatch({
             type: PRODUCT_LIST_SUCCESS,
             payload: data
@@ -33,7 +33,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
         payload: productId
     });
     try{
-        const {data} = await Axios.get(`/api/products/${productId}`);
+        const {data} = await Axios.get(`https://dinesh-4r-spot.herokuapp.com/api/products/${productId}`);
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
             payload: data
