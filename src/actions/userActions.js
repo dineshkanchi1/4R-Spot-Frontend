@@ -50,5 +50,5 @@ export const signout = () => (dispatch) => {
     dispatch({
         type: USER_SIGNOUT
     });
-    document.location.href = 'https://dinesh-4r-spot.herokuapp.com/api/users/signin';
+    document.location.href = '/';
 }
